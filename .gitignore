@@ -1,0 +1,6 @@
+!.gitkeep
+vendor/*
+composer.lock
+.scannerwork/*
+build/*
+sonar-project.properties

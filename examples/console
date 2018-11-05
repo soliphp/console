@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+define('APP_PATH', __DIR__);
+
+require APP_PATH . '/bootstrap.php';
+
+$app = new \Soli\Console\App();
+
+echo $app->handle();

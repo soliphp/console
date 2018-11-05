@@ -1,0 +1,39 @@
+{
+    "name": "soliphp/console",
+    "description": "Soli PHP Console.",
+    "type": "library",
+    "keywords": ["console", "soliphp", "soli"],
+    "homepage": "https://github.com/soliphp/console",
+    "support": {
+        "issues": "https://github.com/soliphp/console/issues",
+        "source": "https://github.com/soliphp/console"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ueaner",
+            "email": "ueaner@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "soliphp/framework": "dev-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Soli\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Soli\\Tests\\": "tests/"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.laravel-china.org"
+        }
+    },
+    "minimum-stability": "dev"
+}
