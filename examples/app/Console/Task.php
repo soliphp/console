@@ -12,13 +12,16 @@ class Task extends Command
     /**
      * 默认执行的方法：index
      */
-    public function index()
+    public function index($name = 'wukong')
     {
-        return 'task:index';
+        return "hello $name, in task:index.\n";
     }
 
-    public function handle()
+    /**
+     * 命令行输入的参数将按顺序作为 action 的参数传入
+     */
+    public function handle($name = 'wukong', $alias = '孙行者')
     {
-        return 'task:handle';
+        return "hello $name <$alias>, in task:handle.\n";
     }
 }

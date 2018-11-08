@@ -25,6 +25,7 @@ class Proc extends Command
         $process->name = 'soli console';
         $process->count = 4;
         $process->daemonize = false;
+        $process->refork = false;
         $process->logFile = '/tmp/soli-console-proc.log';
 
         $this->process = $process;
@@ -48,6 +49,6 @@ class Proc extends Command
 
     protected function doIndex($worker)
     {
-        echo "dump message from worker[{$worker->id} {$worker->workerPid}] process.\n";
+        echo "dump message from [worker:{$worker->id} {$worker->workerPid}] process.\n";
     }
 }
