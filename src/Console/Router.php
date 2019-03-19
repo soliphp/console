@@ -9,6 +9,11 @@ class Router implements RouterInterface
 {
     use RouterTrait;
 
+    public function __construct()
+    {
+        $this->defaultNamespaceName = "App\\Console\\";
+    }
+
     /**
      * @param array $argv ['handler:action', 'param1', 'param2']
      */
