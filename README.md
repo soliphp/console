@@ -24,6 +24,7 @@ Soli Console Component.
 ```php
 <?php
 
+// 终端命令默认访问的命名空间
 namespace App\Console;
 
 require __DIR__ . '/vendor/autoload.php';
@@ -49,17 +50,6 @@ class Task extends \Soli\Console\Command
         return "hello $name <$alias>, in task:handle.\n";
     }
 }
-
-// 配置容器
-$container = new \Soli\Di\Container();
-$container->set('router', function () {
-    $router = new \Soli\Console\Router();
-    $router->setDefaults([
-        // 终端命令默认访问的命名空间
-        'namespace' => "App\\Console\\",
-    ]);
-    return $router;
-});
 
 $app = new \Soli\Console\App();
 
