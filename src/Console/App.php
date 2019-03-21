@@ -19,8 +19,8 @@ class App extends BaseApp
      * 默认核心服务
      */
     protected $coreServices = [
-        'router'     => \Soli\Console\Router::class,
-        'dispatcher' => \Soli\Console\Dispatcher::class,
-        'events'     => \Soli\Events\EventManager::class,
+        'router'     => [\Soli\Console\Router::class, \Soli\RouterInterface::class],
+        'dispatcher' => [\Soli\Console\Dispatcher::class, \Soli\Dispatcher::class, \Soli\DispatcherInterface::class],
+        'events'     => [\Soli\Events\EventManager::class, \Soli\Events\EventManagerInterface::class],
     ];
 }
