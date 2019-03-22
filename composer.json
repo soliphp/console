@@ -36,6 +36,11 @@
             "url": "https://packagist.laravel-china.org"
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.2-dev"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
